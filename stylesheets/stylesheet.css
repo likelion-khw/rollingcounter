@@ -158,27 +158,14 @@ img {
   -ms-box-shadow: 0 0 5px #ebebeb;
 }
 
-pre, code {
-  width: 100%;
-  color: #222;
-  background-color: #fff;
-
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 14px;
-
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-
-
-
-}
 
 pre {
   width: 100%;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
-  overflow: auto;
+  overflow: hidden;
+  background-color: #fff;
+
 }
 
 code {
@@ -425,7 +412,53 @@ Small Device Styles
   code, pre {
     min-width: 320px;
     max-width: 480px;
-    font-size: 11px;
+    font-size: 10px;
   }
 
+}
+
+div .syntaxhighlighter {
+    overflow-y: hidden!important; overflow-x: auto!important;
+}
+
+
+.counter-holder {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: dotted 1px #dddddd;
+}
+
+.counter-holder span {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 38px;
+}
+
+.counter .digit {
+    background: #111111;
+    background: #444444;
+    border-radius: 3px;
+    color: white;
+    width: 24px;
+    height: 38px;
+    margin: 0 1px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+.counter-holder hr {
+    background: none;
+    border: 0;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }

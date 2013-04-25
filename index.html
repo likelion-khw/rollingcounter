@@ -5,9 +5,11 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Rollingcounter : 숫자를 롤링하면서 카운트 하는 jQuery 플러그인 " />
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shCore.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shThemeDefault.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shThemeRDark.css" media="all" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
     <title>Rollingcounter</title>
   </head>
 
@@ -18,7 +20,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/yakuyaku/rollingcounter">View on GitHub</a>
 
-          <h1 id="project_title">Rollingcounter</h1>
+          <h1 id="project_title">RollingCounter</h1>
           <h2 id="project_tagline">숫자를 롤링하면서 카운트 하는 jQuery 플러그인 </h2>
 
             <section id="downloads">
@@ -31,32 +33,56 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>jQuery.rollingCounter</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+        <h4> 실행 예제 </h4>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <div id="example">
+            <div class="counter" data-count="12312312"></div>
+            <button id="oneMore"> 다시 돌려라  버튼 </button>
+            <div class="counter" data-count="9871"></div>
+            <div class="counter" data-count="51513"></div>
+        </div>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
-<h3>Designer Templates</h3>
+        <h3> 사용 안내 </h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+        <h4> Html 작성 </h4>
 
-<h3>Rather Drive Stick?</h3>
+        <p> 출력할 숫자의 속성( data-count ) 값을 할당  </p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+        <pre class="dark">
+            <div class="counter" data-count="12312312"></div>
+            <button id="oneMore"> 다시 돌려라  버튼 </button>
+            <div class="counter" data-count="9871"></div>
+            <div class="counter" data-count="51513"></div>
+        </pre>
 
-<h3>Authors and Contributors</h3>
+        <h4> script 작성 </h4>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+        <p> 옵션 설명 </p>
+        <ul>
+            <li> animte :  애니메이션 효과 사용 여부 ( true/false )</li>
+            <li> attrCount : 카운트할 값이 들어가는 속성명 </li>
+            <li> delayTime : 숫자별 애니메이션 간격 </li>
+            <li> waitTime : 대기 시간 </li>
+            <li> oneMore : 마지막에 바로 출력하지말고 한번더 돌려라 (true/false) </li>
+        </ul>
+        <pre class="dark">
 
-<h3>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+            $(".counter").rollingCounter({
+                animate : true,
+                attrCount : 'data-count',
+                delayTime : 20 ,
+                waitTime : 1 ,
+                easing : 'easeOutBounce',
+                duration : 1000
+            });
+
+
+        </pre>
+
       </section>
     </div>
 
@@ -68,7 +94,16 @@ $ git checkout gh-pages
       </footer>
     </div>
 
-    
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/lettering.js"></script>
+    <script type="text/javascript" src="javascripts/XRegExp.js"></script>
+    <script type="text/javascript" src="javascripts/shCore.js"></script>
+    <script type="text/javascript" src="javascripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="javascripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.rollingCounter.min.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
 
   </body>
 </html>
