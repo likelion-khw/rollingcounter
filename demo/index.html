@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> rollingCounter </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+
+<div class="counter" data-count="12312312"></div>
+
+<button id="oneMore"> 다시 돌려라  버튼 </button>
+
+<div class="counter" data-count="9871"></div>
+<div class="counter" data-count="51513"></div>
+<div class="counter" data-count="91818121365158"></div>
+
+<div class="counter" data-count="183131"></div>
+<div class="counter" data-count="60000"></div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easing.js"></script>
+<script type="text/javascript" src="../jquery.rollingCounter.min.js"></script>
+<script type="text/javascript">
+
+$(".counter").rollingCounter({
+    animate : true,
+    attrCount : 'data-count',
+    delayTime : 20 ,
+    waitTime : 1 ,
+    easing : 'easeOutBounce',
+    duration : 1000
+});
+
+$("#oneMore").bind("click", function(){
+    var counter =  $(".counter").eq(0).data("rollingCounter-1");
+    counter.rolling();
+});
+
+// ]]>
+</script>
+
+</body>
+
+</html>
