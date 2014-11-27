@@ -132,7 +132,7 @@
             }, {duration: ss.opts.duration , specialEasing: {  top: ss.opts.easing } });
         },
 
-        // @todo 기대치 만크 추가로 이동하기
+        // @todo 기대치 만큼 추가로 이동하기
         expectAnimate : function( $digit ) {
 
         },
