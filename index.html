@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Rollingcounter : 숫자를 롤링하면서 카운트 하는 jQuery 플러그인 " />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shCore.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shThemeDefault.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/shThemeRDark.css" media="all" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <title>Rollingcounter</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/yakuyaku/rollingcounter">View on GitHub</a>
+
+          <h1 id="project_title">RollingCounter</h1>
+          <h2 id="project_tagline">숫자를 롤링하면서 카운트 하는 jQuery 플러그인 </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/yakuyaku/rollingcounter/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/yakuyaku/rollingcounter/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>jQuery.rollingCounter</h3>
+
+        <h4> 실행 예제 </h4>
+
+        <div id="example">
+            <div class="counter" data-count="12312312"></div>
+            <button id="oneMore"> 다시 돌려라  버튼 </button>
+            <div class="counter" data-count="77777777"></div>
+            <div class="counter" data-count="51513"></div>
+        </div>
+
+
+        <h3> 사용 안내 </h3>
+
+        <h4> Html 작성 </h4>
+
+        <p> 출력할 숫자의 속성( data-count ) 값을 할당  </p>
+
+        <pre class="dark">
+            <div class="counter" data-count="12312312"></div>
+            <button id="oneMore"> 다시 돌려라  버튼 </button>
+            <div class="counter" data-count="9871"></div>
+            <div class="counter" data-count="51513"></div>
+        </pre>
+
+        <h4> script 작성 </h4>
+
+        <p> 옵션 설명 </p>
+        <ul>
+            <li> animte :  애니메이션 효과 사용 여부 ( true/false )</li>
+            <li> attrCount : 카운트할 값이 들어가는 속성명 </li>
+            <li> delayTime : 숫자별 애니메이션 간격 </li>
+            <li> waitTime : 대기 시간 </li>
+            <li> oneMore : 마지막에 바로 출력하지말고 한번더 돌려라 (true/false) </li>
+        </ul>
+        <pre class="dark">
+
+
+            $(".counter").rollingCounter({
+                animate : true,
+                attrCount : 'data-count',
+                delayTime : 20 ,
+                waitTime : 1 ,
+                easing : 'easeOutBounce',
+                duration : 1000
+            });
+
+
+        </pre>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rollingcounter maintained by <a href="https://github.com/yakuyaku">yakuyaku</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/lettering.js"></script>
+    <script type="text/javascript" src="javascripts/XRegExp.js"></script>
+    <script type="text/javascript" src="javascripts/shCore.js"></script>
+    <script type="text/javascript" src="javascripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="javascripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.rollingCounter.min.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+
+  </body>
+</html>
