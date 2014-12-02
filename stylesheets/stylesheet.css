@@ -432,7 +432,9 @@ div .syntaxhighlighter {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    line-height: 38px;
+    line-height: 78px;
+    font-size:27px;
+    font-weight:bold;
 }
 
 .counter .digit {
@@ -440,8 +442,8 @@ div .syntaxhighlighter {
     background: #444444;
     border-radius: 3px;
     color: white;
-    width: 24px;
-    height: 38px;
+    width: 50px;
+    height: 78px;
     margin: 0 1px;
     overflow: hidden;
     padding: 0;

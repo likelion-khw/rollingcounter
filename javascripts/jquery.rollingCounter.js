@@ -31,7 +31,10 @@
         duration : 1000,
         attrCount : 'data-count',
         easing : 'linear',
-        digit : 'digit'
+        randomnumber : 0 ,
+        digit : 'digit',
+        endfunc : false
+
     };
 
     var Counter = function( el, options ) {
